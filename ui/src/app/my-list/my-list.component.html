@@ -1,1 +1,19 @@
-<p>my-list works!</p>
+<div class="card">
+  <div
+    class="card-body list_container d-flex flex-column justify-content-center align-items-center gap-3"
+  >
+    <form #f="ngForm" (ngSubmit)="addItem(f)">
+      <div
+        class="d-flex flex-row justify-content-between align-items-start gap-3"
+        style="width: 100%"
+      >
+        <div class="mb-3" style="width: 250px">
+          <input type="text" class="form-control" id="text" name="listItem" ngModel required />
+        </div>
+        <button class="btn btn-info" type="submit" [disabled]="!f.valid">
+          add item
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
