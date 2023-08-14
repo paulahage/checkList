@@ -1,0 +1,4 @@
+input[type="checkbox"]:checked + .strikeThrough{
+  text-decoration: line-through;
+  color: rgb(177, 177, 177);
+}

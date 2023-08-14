@@ -1,19 +1,32 @@
 <div class="card">
   <div
-    class="card-body list_container d-flex flex-column justify-content-center align-items-center gap-3"
+    class="card-body list_container d-flex flex-column justify-content-start align-items-start gap-3"
+    style="width: 100%"
   >
-    <form #f="ngForm" (ngSubmit)="addItem(f)">
-      <div
-        class="d-flex flex-row justify-content-between align-items-start gap-3"
-        style="width: 100%"
-      >
-        <div class="mb-3" style="width: 250px">
-          <input type="text" class="form-control" id="text" name="listItem" ngModel required />
-        </div>
-        <button class="btn btn-info" type="submit" [disabled]="!f.valid">
-          add item
-        </button>
+    <form
+      #f="ngForm"
+      (ngSubmit)="addItem(f)"
+      class="d-flex flex-row justify-content-between align-items-start gap-3 mb-5 mt-3"
+    >
+      <div style="width: 250px">
+        <input
+          type="text"
+          class="form-control"
+          id="text"
+          name="listItem"
+          ngModel
+          required
+        />
       </div>
+      <button class="btn btn-info" type="submit" [disabled]="!f.valid">
+        add item
+      </button>
     </form>
+    <app-list-item
+      *ngFor="let item of listItems$ | async; let i = index"
+      [item]="item"
+      [index]="i"
+      style="width: 100%"
+    ></app-list-item>
   </div>
 </div>

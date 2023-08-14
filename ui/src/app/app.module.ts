@@ -8,6 +8,7 @@ import { SignInComponent } from './sign-in/sign-in.component';
 import { HomeComponent } from './home/home.component';
 import { MyListComponent } from './my-list/my-list.component';
 import { LoadingComponent } from './loading/loading.component';
+import { ListItemComponent } from './list-item/list-item.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { LoadingComponent } from './loading/loading.component';
     SignInComponent,
     HomeComponent,
     MyListComponent,
-    LoadingComponent
+    LoadingComponent,
+    ListItemComponent
   ],
   imports: [
     BrowserModule,
