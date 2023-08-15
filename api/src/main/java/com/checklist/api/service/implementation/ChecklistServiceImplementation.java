@@ -16,9 +16,7 @@ public class ChecklistServiceImplementation implements ChecklistService {
     }
 
     @Override
-    public UserEntity registerUser(UserEntity user){
-        return checklistRepository.save(user);
-    }
+    public UserEntity registerUser(UserEntity user) { return checklistRepository.save(user); }
 
     @Override
     public Optional<UserEntity> getUser(Long id){

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ChecklistService } from '../services/checklist.service';
+import { ApiService } from '../services/api.service';
 
 @Component({
   selector: 'app-sign-in',
@@ -13,7 +14,8 @@ export class SignInComponent {
 
   constructor(
     private router: Router,
-    private checkListService: ChecklistService
+    private checkListService: ChecklistService,
+    private apiService: ApiService
   ) {}
 
   ngOnInit() {
@@ -29,6 +31,8 @@ export class SignInComponent {
 
     setTimeout(() => {
       this.checkListService.isLoading = false;
+      this.apiService.registerUser(this.signInForm.value);
+      this.checkListService.addUserInStorage();
 
       this.router.navigate(['checklist/my-list']);
     }, 1500);
