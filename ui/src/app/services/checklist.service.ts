@@ -8,17 +8,9 @@ import { User } from '../models/user.model';
 export class ChecklistService {
   constructor() {}
 
-  ngOnInit() {}
-
   isLoading: boolean = false;
   listItems = new BehaviorSubject<string[] | []>([]);
   user = new BehaviorSubject<User | null>(null);
-
-  //userOnStorage = localStorage.getItem('user');
-
-  // checkStorage() {
-  //   return this.userOnStorage ? true : false;
-  // }
 
   addUserInStorage() {
     if (this.user) {
