@@ -23,6 +23,9 @@ export class ApiService {
   registerUser(user: User): void {
     this.http
       .post<User>(`${this.apiBaseUrl}${this.signInEndpoint}`, user)
-      .subscribe((user: User) => this.checklistService.user.next(user));
+      .subscribe((user: User) => {
+        this.checklistService.user.next(user);
+        this.checklistService.addUserInStorage();
+      });
   }
 }

@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { MyListComponent } from './my-list/my-list.component';
 import { LoadingComponent } from './loading/loading.component';
 import { ListItemComponent } from './list-item/list-item.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ListItemComponent } from './list-item/list-item.component';
     HomeComponent,
     MyListComponent,
     LoadingComponent,
-    ListItemComponent
+    ListItemComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
