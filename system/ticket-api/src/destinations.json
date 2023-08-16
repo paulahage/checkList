@@ -1,0 +1,26 @@
+[
+    {
+        "id": "df991d15-541d-43c9-8b8c-e1cf4a063fa7",
+        "name": "London"
+    },
+    {
+        "id": "cdc25587-a88c-428e-9f96-5545bb329a73",
+        "name": "Manchester"
+    },
+    {
+        "id": "d0589c62-0a3c-4a6b-b7e7-18d7ca992cf4",
+        "name": "Bristol"
+    },
+    {
+        "id": "e6b53138-0a94-45af-b4e1-b9f21c5030b7",
+        "name": "Birmingham"
+    },
+    {
+        "id": "f18261d9-dca6-40b4-bee8-f48810999c3f",
+        "name": "Leeds"
+    },
+    {
+        "id": "572878ba-3c4e-11ee-be56-0242ac120002",
+        "name": "Norwich"
+    }
+]
