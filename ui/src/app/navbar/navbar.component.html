@@ -1,0 +1,22 @@
+<nav
+  class="navbar bg-dark border-bottom border-body navbar-expand-lg navbar_container"
+  data-bs-theme="dark"
+>
+  <div class="container-fluid">
+    <span
+      class="navbar-brand mb-0 h3"
+      *ngIf="user$ | async as user; else storageOption"
+      >{{ user.username }}</span
+    >
+    <ng-template #storageOption>
+      <span class="navbar-brand mb-0 h3">{{ userOnStorage.username }}</span>
+    </ng-template>
+    <button
+      type="button"
+      class="btn btn-sm btn-outline-info"
+      (click)="logout()"
+    >
+      Logout
+    </button>
+  </div>
+</nav>

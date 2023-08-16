@@ -32,7 +32,6 @@ export class SignInComponent {
     setTimeout(() => {
       this.checkListService.isLoading = false;
       this.apiService.registerUser(this.signInForm.value);
-      this.checkListService.addUserInStorage();
 
       this.router.navigate(['checklist/my-list']);
     }, 1500);

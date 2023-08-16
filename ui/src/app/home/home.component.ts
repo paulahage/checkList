@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { User } from '../models/user.model';
+import { ChecklistService } from '../services/checklist.service';
 
 @Component({
   selector: 'app-home',
@@ -10,15 +11,13 @@ import { User } from '../models/user.model';
 export class HomeComponent {
   userOnStorage!: User;
 
-  constructor(private router: Router) {}
+  constructor(
+    private router: Router,
+    private checklistService: ChecklistService
+  ) {}
 
   ngOnInit() {
-    const user = localStorage.getItem('user');
-
-    if (user) {
-      this.userOnStorage = JSON.parse(user);
-      console.log(this.userOnStorage);
-    }
+    this.userOnStorage = this.checklistService.checkStorage();
   }
 
   signInCheckList() {

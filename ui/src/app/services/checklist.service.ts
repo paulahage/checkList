@@ -22,4 +22,12 @@ export class ChecklistService {
       console.log('Theres no User to save in storage!');
     }
   }
+
+  checkStorage() {
+    const user = localStorage.getItem('user');
+
+    if (user) {
+      return JSON.parse(user);
+    }
+  }
 }
