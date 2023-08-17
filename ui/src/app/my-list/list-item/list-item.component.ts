@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { ChecklistService } from '../services/checklist.service';
+import { ChecklistService } from '../../services/checklist.service';
 
 @Component({
   selector: 'app-list-item',
@@ -15,7 +15,9 @@ export class ListItemComponent {
   deleteItem(itemIndex: number) {
     const currentListItems = this.checklistService.listItems.getValue();
 
-    const newListItems = currentListItems.filter( (item, index) => index !== itemIndex );
+    const newListItems = currentListItems.filter(
+      (item, index) => index !== itemIndex
+    );
 
     this.checklistService.listItems.next(newListItems);
   }
