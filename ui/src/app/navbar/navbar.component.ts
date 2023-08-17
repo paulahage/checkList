@@ -27,6 +27,6 @@ export class NavbarComponent {
     localStorage.removeItem('user');
     this.checklistService.user.next(null);
 
-    this.router.navigate(['/checklist']);
+    this.router.navigate(['/checkTicket']);
   }
 }
