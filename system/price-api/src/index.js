@@ -2,6 +2,8 @@ const fs = require('fs')
 const express = require('express')
 const app = express()
 const axios = require('axios')
+var cors = require('cors')
+app.use(cors());
 
 
 const destinationsFile = fs.readFileSync('src/status.json', 'utf-8')

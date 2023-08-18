@@ -2,6 +2,8 @@ const fs = require('fs')
 const express = require('express')
 const axios = require('axios')
 const app = express()
+var cors = require('cors')
+app.use(cors());
 
 const destinationsFile = fs.readFileSync('src/status.json', 'utf-8')
 const destinations = JSON.parse(destinationsFile).sort( () => .5 - Math.random() );

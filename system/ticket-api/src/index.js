@@ -2,6 +2,8 @@ const fs = require('fs')
 const express = require('express')
 const app = express()
 const axios = require('axios')
+var cors = require('cors')
+app.use(cors());
 
 app.get('/get', async (req, res) => {
     const token = req.header('Authorization');
