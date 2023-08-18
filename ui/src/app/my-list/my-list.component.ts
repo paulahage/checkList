@@ -2,6 +2,7 @@ import { Component, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { ChecklistService } from '../services/checklist.service';
 import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-my-list',
@@ -13,7 +14,7 @@ export class MyListComponent {
 
   listItems$!: Observable<string[] | []>;
 
-  constructor(private checklistService: ChecklistService) { }
+  constructor(private checklistService: ChecklistService, private router: Router) { }
 
   ngOnInit() {
     this.listItems$ = this.checklistService.listItems
@@ -29,5 +30,9 @@ export class MyListComponent {
     this.checklistService.listItems.next(newListItems);
 
     form.reset();
+  }
+
+  checkTickets() {
+    this.router.navigate(['/checklist/travels']);
   }
 }

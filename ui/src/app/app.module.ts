@@ -11,6 +11,7 @@ import { MyListComponent } from './my-list/my-list.component';
 import { LoadingComponent } from './loading/loading.component';
 import { ListItemComponent } from './list-item/list-item.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { TravelsComponent } from './travels/travels.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     MyListComponent,
     LoadingComponent,
     ListItemComponent,
-    NavbarComponent
+    NavbarComponent,
+    TravelsComponent
   ],
   imports: [
     BrowserModule,

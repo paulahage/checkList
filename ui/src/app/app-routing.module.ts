@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { MyListComponent } from './my-list/my-list.component';
+import { TravelsComponent } from './travels/travels.component';
 import { checklistGuard } from './utils/route-guards';
 
 const routes: Routes = [
@@ -14,6 +15,7 @@ const routes: Routes = [
     component: MyListComponent,
     canActivate: [checklistGuard],
   },
+  { path: 'checklist/travels', component: TravelsComponent },
 ];
 
 @NgModule({
