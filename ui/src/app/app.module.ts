@@ -9,8 +9,8 @@ import { SignInComponent } from './sign-in/sign-in.component';
 import { HomeComponent } from './home/home.component';
 import { MyListComponent } from './my-list/my-list.component';
 import { LoadingComponent } from './loading/loading.component';
-import { ListItemComponent } from './list-item/list-item.component';
-import { NavbarComponent } from './navbar/navbar.component';
+import { ListItemComponent } from './my-list/list-item/list-item.component';
+import { NavbarComponent } from './my-list/navbar/navbar.component';
 import { TravelsComponent } from './travels/travels.component';
 
 @NgModule({
@@ -22,16 +22,16 @@ import { TravelsComponent } from './travels/travels.component';
     LoadingComponent,
     ListItemComponent,
     NavbarComponent,
-    TravelsComponent
+    TravelsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

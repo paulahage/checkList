@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { ChecklistService } from '../services/checklist.service';
-import { User } from '../models/user.model';
+import { ChecklistService } from '../../services/checklist.service';
+import { User } from '../../models/user.model';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 
@@ -27,6 +27,6 @@ export class NavbarComponent {
     localStorage.removeItem('user');
     this.checklistService.user.next(null);
 
-    this.router.navigate(['/checklist']);
+    this.router.navigate(['/checkTicket']);
   }
 }
